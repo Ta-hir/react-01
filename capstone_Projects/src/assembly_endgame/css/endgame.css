@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #262626;
+  color: #d9d9d9;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  text-align: center;
+}
+header > h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #f9f4da;
+}
+header > p {
+  font-size: 0.87rem;
+  max-width: 350px;
+  color: #8e8e8e;
+}
+
+.game-status {
+  font-size: 1.5rem;
+  background-color: #10a95b;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0.2rem 0.23rem;
+  border-radius: 0.2rem;
+  color: #f4f9d4;
+}
+.game-status.won {
+  background-color: #10a95b;
+}
+.game-status.lost {
+  background-color: #ba2a2a;
+}
+
+.game-status > p {
+  margin: 0;
+}
+
+.language-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  justify-content: center;
+  max-width: 350px;
+  margin: 36px;
+}
+.chip {
+  border-radius: 3px;
+  padding: 4.5px;
+  position: relative;
+}
+.chip.lost::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.word {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+.letter {
+  height: 40px;
+  width: 40px;
+  background-color: #323232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125rem;
+  border-bottom: 1px solid #f9f4d4;
+}
+.letter.missed-letter {
+  color: #ba2a2a;
+}
+.keybord {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 36px;
+  gap: 5px;
+  max-width: 450px;
+}
+.keybord > button {
+  color: black;
+  background-color: #fcba29;
+  border: 1px solid #d7d7d7;
+  border-radius: 0.2rem;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.keybord > button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.keybord > button.correct {
+  background-color: #10a95b;
+}
+.keybord > button.wrong {
+  background-color: #ec5d49;
+}
+.new-game-btn {
+  display: flex;
+  justify-content: center;
+}
+.new-game-btn > button {
+  text-transform: capitalize;
+  background-color: #1eb3ee;
+  color: black;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-weight: bold;
+}

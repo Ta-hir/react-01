@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.main-header {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+    0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+.main-header > h1 {
+  font-weight: 400;
+}
+
+main {
+  padding: 2rem;
+}
+.add-ingridient-form {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 2rem;
+}
+
+.add-ingridient-form > input {
+  border-radius: 0.2rem;
+  height: 1.5rem;
+  padding: 9px 13px;
+  border: 1px solid #d1d5db;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  flex-grow: 1;
+  min-width: 150px;
+  max-width: 400px;
+}
+.add-ingridient-form > button {
+  background: #141413;
+  color: white;
+  cursor: pointer;
+  /* padding: .5rem; */
+  border-radius: 0.2rem;
+  border: none;
+}
+
+.add-ingridient-form > button::before {
+  content: "+";
+  margin: 5px;
+}
+
+.value {
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* .ingridients-list{
+    list-style: c;
+} */
+
+.get-reciepe-container {
+  background-color: #d1d5db;
+  padding: 1rem 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.generate-btn {
+  background-color: rgb(214, 70, 70);
+  color: white;
+  border: none;
+  border-radius: 0.2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+.buttons-container {
+  border: 2px solid red;
+  background-color: #141413;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+.buttons-container > button {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0.2rem;
+  border: 3px solid white;
+  opacity: 0.1;
+  cursor: pointer;
+}
+.buttons-container > button.on {
+  opacity: 1;
+}
